@@ -1,0 +1,39 @@
+<html dir="ltr" lang="en">'
+		<head>'
+		<title>Add Vessels</title>'
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">'
+				<meta name="robots" content="noindex">'
+		</head>'
+						<body style="background:url(/view/image/troy_logo.png);">'
+		<div class="row header contact">
+		<div class="col-lg-12" >
+		<div class="table">
+		<div class=".col-lg-12 col-md-12 col-sm-6" >
+		<b><i>Multiple Contacts </b></i><div class="form-group"><label class="radio-inline"><input type="radio" name="multi_contact" id="multi_yes"> Yes</label>  <label class="radio-inline" for="multi_no"><input type="radio" name="multi_contact" id="multi_no" checked="checked"> No</label> </div>
+		</div>
+		<div class="row" >
+		<table class="table table-bordered"><thead><tr><td></td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Phone Number</td></tr></thead><tbody>
+
+
+		//script type="text/javascript">$("input[name=first_name]").live("change",function(){var first_name = $("#first_name").val();$.post("controller/setting/ajaxpersist.php", {"fieldname" : "first_name","value":first_name});$("input[name=\"first_name\"]").val(first_name);});</script>'
+								//<script type="text/javascript">$("input[name=last_name]").live("change",function(){var last_name = $("#last_name").val();$.post("controller/setting/ajaxpersist.php", {"fieldname" : "last_name","value":last_name});$("input[name=\"last_name\"]").val(last_name);});</script>'
+//<script type="text/javascript">$("input[name=phone]").live("change",function(){var phone = $("#phone").val();$.post("controller/setting/ajaxpersist.php", {"fieldname" : "phone","value":phone});$("input[name=\"phone\"]").val(phone);});</script>'
+//<script type="text/javascript">$("input[name=email1]").live("change",function(){var email1 = $("#email1").val();$.post("controller/setting/ajaxpersist.php", {"fieldname" : "email1","value":email1});$("input[name=\"email1\"]").val(email1);});</script>'
+
+if($contactlist) {
+	foreach ($contactlist as $contact) {
+
+		<tr>
+		foreach ($contact['action'] as $action) {
+			<td><a type="button" href="'.$action['href'].'" onclick="" class="btn btn-primary" data-toggle="tooltip" title="'.$action['text'].'" ><i class="fa fa-plus"></i></a>
+			<a type="button" href="'.$action['edit'].'" class="btn btn-info"title="Edit this Contact" ><i class="fa fa-user"></i></a></td>
+		}
+		<td class="text-center">'.$contact['firstname'].'</td>
+		<td class="text-center">'.$contact['lastname'].'</td>
+		<td class="text-left">'. $contact['email'].'</td>
+		<td class="text-center">'.$contact['phone'].'</td>
+	}
+	</tbody></table></div>
+	</div>
+	</body>'
+</html>'

@@ -1,0 +1,48 @@
+a Strategic Initiatives
+	Direct Connect
+	Hybrid Cloud
+	ECX Enablement
+b Potential Package solutions
+	Cloud Foundation
+	Cloud Discovery Workshop
+	Cloud Training
+	HPC Cloud Burst
+	VM Migration to CSP
+	VM Lift and Shift to CSP
+	Office 365 Migration
+c Deal support
+
+Weekly capacity allocation
+
+a Strategic Initiatives => booking
+b Potential Package solutions => quote
+c Deal support => customer
+
+	$sql="SELECT COUNT(*) AS total, bkdate as date_added FROM `" . DB_PREFIX_APP . "book` WHERE monthname(curdate()) = monthname(bkdate) and (YEAR(curdate()) = (YEAR(bkdate))) and week(curdate()) = week(bkdate) group by DAYNAME(bkdate)";
+	
+	$sql="SELECT COUNT(*) AS total, DateService as date_added FROM `" . DB_PREFIX_APP . "engagement` WHERE monthname(curdate()) = monthname(DateService) and (YEAR(curdate()) = (YEAR(DateService))) and week(curdate()) = week(DateService) group by DAYNAME(DateService)";
+
+	$sql= "SELECT COUNT(*) AS total, bkdate as date_added,DAYNAME(bkdate) as day
+			FROM `" . DB_PREFIX_APP . "book` WHERE bkstat IN('O') AND week(bkdate) = week(now())
+			GROUP BY DAYNAME(bkdate) order by bkdate asc";
+			
+	$sql= "SELECT COUNT(*) AS total, DateService as date_added,DAYNAME(DateService) as day
+			FROM `" . DB_PREFIX_APP . "engagement` WHERE Type IN('Packaged') AND week(DateService) = week(now())
+			GROUP BY DAYNAME(DateService) order by DateService asc";		
+			
+	$sql="SELECT COUNT(*) AS total, bkdate as date_added FROM `epspe_book` WHERE monthname(curdate()) >=  monthname(bkdate) and YEAR(bkdate) = YEAR(curdate()) GROUP BY DATE(bkdate)";
+	
+	$sql="SELECT COUNT(*) AS total, DateService as date_added FROM `epspe_book` WHERE monthname(curdate()) >=  monthname(DateService) and YEAR(DateService) = YEAR(curdate()) GROUP BY DATE(DateService)";
+	
+	$sql="SELECT COUNT(*) AS total, bkdate as date_added FROM `epspe_book` WHERE bkstat IN('R') AND Month(bkdate) = Month(now())
+			GROUP BY DATE(bkdate) order by bkdate asc";
+	
+	$sql="SELECT COUNT(*) AS total, DateService as date_added FROM `" . DB_PREFIX_APP . "engagement` WHERE Type IN('Strategic') AND Month(DateService) = Month(now())	GROUP BY DATE(DateService) order by DateService asc";
+	
+	$sql = "select count(*) as total,bkdate as date_added,monthname(bkdate) from epspe_book where bkstat = 'O'
+				AND YEAR(bkdate) = YEAR(NOW()) GROUP BY MONTH(bkdate)";
+	
+	$sql = "select count(*) as total,DateService as date_added,monthname(DateService) from `" . DB_PREFIX_APP . "engagement` where Type = 'Packaged'
+	AND YEAR(DateService) = YEAR(NOW()) GROUP BY MONTH(DateService)";
+	
+	SELECT *, (SELECT ug.name FROM `epspe_user_group` ug WHERE ug.user_group_id = u.user_group_id) AS user_group FROM `epspe_user` u WHERE u.user_id = '1'");

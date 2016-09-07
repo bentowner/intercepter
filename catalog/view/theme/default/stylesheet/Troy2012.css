@@ -1,0 +1,206 @@
+@charset "utf-8";
+/* links */
+a:link,a:hover,a:visited,a:active 
+{
+  font-family: 'CenturyGothic-Bold';
+  font-size:9px;
+  text-transform:uppercase;
+}
+
+/* Error message used primarily during form validation */
+.TroyErrorMessage 
+{
+	position: relative;
+	z-index: 100;
+	background:transparent;
+	border: 1px solid #ff0000;
+	font-size: 8pt;
+	padding: 0px;
+	color:#000;
+	font-family: 'CenturyGothic-Bold';
+}
+
+/* Information message used primarily for confirmations */
+.TroyConfirmMessage 
+{
+	position: relative;
+	z-index: 100;
+	background:transparent;
+	border: 1px solid green;
+	font-size: 10pt;
+	padding: 0px;
+	color:#000;
+	font-family: 'CenturyGothic-Bold';
+}
+
+/* Error summary area */
+.TroyErrorSummary {
+  border: solid 1px red;
+  display: block;
+  background-color: White;
+ }
+.TroyErrorSummary ul {
+  list-style-image: url(PawPrintBullet.gif);
+  }
+.TroyErrorSummary ul li {
+	font-family: 'CenturyGothic-Bold';
+	font-size: 16px;
+  color: #282880;
+  }
+
+/* Form Labels */
+label 
+{
+  font-family: 'CenturyGothic-Bold';
+  font-size:11px;
+  text-transform:uppercase;
+  color:#000;
+}
+.label 
+{
+  font-family: 'CenturyGothic-Bold';
+  font-size:11px;
+  text-transform:uppercase;
+  color:#000;
+}
+
+.LargeText {
+    font-size: large;
+}
+.LargerText {
+    font-size: larger;
+}
+
+/* Fieldset used to hide/show area on the page */
+fieldset {
+	border: 1px solid #005261;
+}
+legend {
+  font-family: 'CenturyGothic-Bold';
+	color: #005261;
+	text-align: center;
+}
+
+
+/* Label used when displaying query results */
+.troyLabel 
+{
+  font-family: 'CenturyGothic-Bold';
+  font-size:11px;
+  text-transform:uppercase;
+  color:#000;
+}
+.troylabel 
+{
+  font-family: 'CenturyGothic-Bold';
+  font-size:11px;
+  text-transform:uppercase;
+  color:#000;
+}
+#FFRadioList 
+{
+  margin-left: 20px;
+}
+
+
+/* Data shown when displaying query results */
+.troyData 
+{
+  font-family: 'CenturyGothic-Bold';
+  font-size:11px;
+  color: #005261;
+}
+.troydata 
+{
+  font-family: 'CenturyGothic-Bold';
+  font-size:11px;
+  color: #005261;
+}
+
+
+/* Data shown when displaying query results */
+.troyDataSmall 
+{
+  font-family: 'CenturyGothic-Bold';
+  font-size: 9pt;
+  color: #005261;
+}
+
+
+/* Used in Sailing Schedule table to show a flyover box with warehouse information */
+.ToolTip a {
+	text-decoration: none;
+}
+.ToolTip a:hover {
+	position: relative;
+}
+.ToolTip a span {
+	display: none;
+	text-decoration: none;
+}
+.ToolTip a:hover span {
+	display: block;
+   	position: absolute; 
+   	top: 10px; 
+   	left: 0;
+	text-decoration: none;
+	/* formatting only styles */
+   	padding: 5px; 
+   	margin: 10px; 
+   	z-index: 100;
+   	background: #f0f0f0; 
+   	color: #000000;
+	font-family: 'CenturyGothic-Bold';
+	text-align: left;
+	/* end formatting */
+}
+
+
+/* Formatting for data tables */
+#data-table
+{
+	font-family: 'CenturyGothic-Bold';
+	font-size: 12px;
+	background: #fff;
+	/*margin: 45px;
+	width: 480px;*/
+	border-collapse: collapse;
+	text-align: left;
+}
+#data-table th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #005261;
+	padding: 10px 8px;
+	border-bottom: 2px solid #5d9732;
+}
+#data-table td
+{
+	border-bottom: 1px solid #ccc;
+	color: #005261;
+	padding: 6px 8px;
+}
+#data-table tbody tr:hover td
+{
+	color: #000;
+}
+
+/* Hover Tooltip */
+a.tooltip:hover {background:#ffffff; text-decoration:none;} /*BG color is a must for IE6*/
+a.tooltip span {display:none; padding:2px 3px; margin-left:8px; width:300px;} 
+a.tooltip:hover span{display:inline; position:absolute; background:#ffffff; border:1px solid #cccccc; color:#6c6c6c;} 
+
+/* Shift login button left */
+.top-login  {
+	color:#FFFFFF;
+	font-family: 'CenturyGothic-Bold', Arial;
+	font-size:8px;
+	text-transform:uppercase;
+	position:absolute;
+	left:8px; 
+	top:0px;
+	vertical-align:middle;
+	padding-top:0px;
+	
+}
