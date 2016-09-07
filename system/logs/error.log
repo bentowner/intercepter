@@ -44,3 +44,7 @@
 2016-09-07 16:43:14 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
 2016-09-07 16:43:14 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
 2016-09-07 16:43:14 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
+2016-09-07 20:06:03 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
+2016-09-07 20:06:03 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
+2016-09-07 20:06:03 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
+2016-09-07 20:06:03 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
