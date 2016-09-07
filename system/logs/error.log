@@ -18,3 +18,29 @@
 2016-09-07 16:06:20 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
 2016-09-07 16:06:20 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
 2016-09-07 16:06:20 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
+2016-09-07 16:17:48 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
+2016-09-07 16:17:48 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
+2016-09-07 16:17:48 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
+2016-09-07 16:17:48 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
+2016-09-07 16:42:41 - PHP Notice:  Error: Table 'eps.epspe_engagement' doesn't exist<br />Error No: 1146<br />SELECT COUNT(*) AS total FROM `epspe_engagement` WHERE engagement_id > 0 AND DateService = '2016-09-07' in C:\inetpub\wwwroot\intercepter\system\library\db\mysqli.php on line 40
+2016-09-07 16:42:41 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\model\service\eps.php on line 892
+2016-09-07 16:42:41 - PHP Notice:  Error: Table 'eps.epspe_engagement' doesn't exist<br />Error No: 1146<br />SELECT COUNT(*) AS total FROM `epspe_engagement` WHERE engagement_id > 0 AND DateService = '2016-09-05' in C:\inetpub\wwwroot\intercepter\system\library\db\mysqli.php on line 40
+2016-09-07 16:42:41 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\model\service\eps.php on line 892
+2016-09-07 16:42:41 - PHP Notice:  Error: Table 'eps.epspe_engagement' doesn't exist<br />Error No: 1146<br />SELECT COUNT(*) AS total FROM `epspe_engagement` WHERE engagement_id > 0 AND DateService >= DATE('2015-01-01') in C:\inetpub\wwwroot\intercepter\system\library\db\mysqli.php on line 40
+2016-09-07 16:42:41 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\model\service\eps.php on line 892
+2016-09-07 16:42:41 - PHP Notice:  Error: Table 'eps.epspe_engagement' doesn't exist<br />Error No: 1146<br />SELECT COUNT(*) AS total FROM `epspe_engagement` WHERE engagement_id > 0 AND DateService >= DATE('2016-09-07') in C:\inetpub\wwwroot\intercepter\system\library\db\mysqli.php on line 40
+2016-09-07 16:42:41 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\model\service\eps.php on line 892
+2016-09-07 16:42:41 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
+2016-09-07 16:42:41 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
+2016-09-07 16:42:41 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
+2016-09-07 16:42:41 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
+2016-09-07 16:42:42 - PHP Notice:  Error: Table 'eps.epspe_engagement' doesn't exist<br />Error No: 1146<br />SELECT COUNT(*) AS total, DateService as date_added FROM `epspe_engagement` WHERE Type IN('Strategic') AND Month(DateService) = Month(now())	GROUP BY DATE(DateService) order by DateService asc in C:\inetpub\wwwroot\intercepter\system\library\db\mysqli.php on line 40
+2016-09-07 16:42:42 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\model\report\eps.php on line 223
+2016-09-07 16:42:42 - PHP Warning:  Invalid argument supplied for foreach() in C:\inetpub\wwwroot\intercepter\eps\model\report\eps.php on line 223
+2016-09-07 16:42:42 - PHP Notice:  Error: Table 'eps.epspe_engagement' doesn't exist<br />Error No: 1146<br />SELECT COUNT(*) AS total, DateService as date_added FROM `epspe_engagement` WHERE Type IN('Packaged') AND Month(DateService) = Month(now())	GROUP BY DATE(DateService) order by DateService asc in C:\inetpub\wwwroot\intercepter\system\library\db\mysqli.php on line 40
+2016-09-07 16:42:42 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\model\report\eps.php on line 249
+2016-09-07 16:42:42 - PHP Warning:  Invalid argument supplied for foreach() in C:\inetpub\wwwroot\intercepter\eps\model\report\eps.php on line 249
+2016-09-07 16:43:14 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
+2016-09-07 16:43:14 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 107
+2016-09-07 16:43:14 - PHP Notice:  Undefined variable: customer_object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
+2016-09-07 16:43:14 - PHP Notice:  Trying to get property of non-object in C:\inetpub\wwwroot\intercepter\eps\view\template\common\dashboard.tpl on line 108
