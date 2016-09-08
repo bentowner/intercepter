@@ -17,7 +17,7 @@ class ControllerSolutionsSolution extends Controller {
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$this->load->model('sale/order');
+		$this->load->model('solutions/solution');
 
 		unset($this->session->data['cookie']);
 
@@ -70,7 +70,7 @@ class ControllerSolutionsSolution extends Controller {
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$this->load->model('sale/order');
+		$this->load->model('solutions/solution');
 
 		unset($this->session->data['cookie']);
 
@@ -123,7 +123,7 @@ class ControllerSolutionsSolution extends Controller {
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$this->load->model('sale/order');
+		$this->load->model('solutions/solution');
 
 		unset($this->session->data['cookie']);
 
@@ -246,7 +246,7 @@ class ControllerSolutionsSolution extends Controller {
 				$url .= '&page=' . $this->request->get['page'];
 			}
 
-			$this->response->redirect($this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, 'SSL'));
+			$this->response->redirect($this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . $url, 'SSL'));
 		}
 
 		$this->getList();
@@ -354,11 +354,11 @@ class ControllerSolutionsSolution extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, 'SSL')
+			'href' => $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . $url, 'SSL')
 		);
 
-		$data['invoice'] = $this->url->link('sale/order/invoice', 'token=' . $this->session->data['token'], 'SSL');
-		$data['shipping'] = $this->url->link('sale/order/shipping', 'token=' . $this->session->data['token'], 'SSL');
+		$data['invoice'] = $this->url->link('solutions/solution/invoice', 'token=' . $this->session->data['token'], 'SSL');
+		$data['shipping'] = $this->url->link('solutions/solution/shipping', 'token=' . $this->session->data['token'], 'SSL');
 		$data['add'] = $this->url->link('solutions/solution/add', 'token=' . $this->session->data['token'], 'SSL');
 
 		$data['orders'] = array();
@@ -389,9 +389,9 @@ class ControllerSolutionsSolution extends Controller {
 				'date_added'    => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'date_modified' => date($this->language->get('date_format_short'), strtotime($result['date_modified'])),
 				'shipping_code' => $result['shipping_code'],
-				'view'          => $this->url->link('sale/order/info', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'] . $url, 'SSL'),
-				'edit'          => $this->url->link('sale/order/edit', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'] . $url, 'SSL'),
-				'delete'        => $this->url->link('sale/order/delete', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'] . $url, 'SSL')
+				'view'          => $this->url->link('solutions/solution/info', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'] . $url, 'SSL'),
+				'edit'          => $this->url->link('solutions/solution/edit', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'] . $url, 'SSL'),
+				'delete'        => $this->url->link('solutions/solution/delete', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'] . $url, 'SSL')
 			);
 		}
 
@@ -484,12 +484,12 @@ class ControllerSolutionsSolution extends Controller {
 			$url .= '&page=' . $this->request->get['page'];
 		}
 
-		$data['sort_order'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=o.order_id' . $url, 'SSL');
-		$data['sort_customer'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=customer' . $url, 'SSL');
-		$data['sort_status'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=status' . $url, 'SSL');
-		$data['sort_total'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=o.total' . $url, 'SSL');
-		$data['sort_date_added'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=o.date_added' . $url, 'SSL');
-		$data['sort_date_modified'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=o.date_modified' . $url, 'SSL');
+		$data['sort_order'] = $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . '&sort=o.order_id' . $url, 'SSL');
+		$data['sort_customer'] = $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . '&sort=customer' . $url, 'SSL');
+		$data['sort_status'] = $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . '&sort=status' . $url, 'SSL');
+		$data['sort_total'] = $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . '&sort=o.total' . $url, 'SSL');
+		$data['sort_date_added'] = $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . '&sort=o.date_added' . $url, 'SSL');
+		$data['sort_date_modified'] = $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . '&sort=o.date_modified' . $url, 'SSL');
 
 		$url = '';
 
@@ -529,7 +529,7 @@ class ControllerSolutionsSolution extends Controller {
 		$pagination->total = $order_total;
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_limit_admin');
-		$pagination->url = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
+		$pagination->url = $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
 
 		$data['pagination'] = $pagination->render();
 
@@ -553,7 +553,7 @@ class ControllerSolutionsSolution extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('sale/order_list.tpl', $data));
+		$this->response->setOutput($this->load->view('solutions/solution_list.tpl', $data));
 	}
 
 	public function getForm() {
@@ -691,10 +691,10 @@ class ControllerSolutionsSolution extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, 'SSL')
+			'href' => $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . $url, 'SSL')
 		);
 
-		$data['cancel'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, 'SSL');
+		$data['cancel'] = $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . $url, 'SSL');
 
 		if (isset($this->request->get['order_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$order_info = $this->model_solutions_solution->getOrder($this->request->get['order_id']);
@@ -899,11 +899,11 @@ class ControllerSolutionsSolution extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('sale/order_form.tpl', $data));
+		$this->response->setOutput($this->load->view('solutions/solution_form.tpl', $data));
 	}
 
 	public function info() {
-		$this->load->model('sale/order');
+		$this->load->model('solutions/solution');
 
 		if (isset($this->request->get['order_id'])) {
 			$order_id = $this->request->get['order_id'];
@@ -914,7 +914,7 @@ class ControllerSolutionsSolution extends Controller {
 		$order_info = $this->model_solutions_solution->getOrder($order_id);
 
 		if ($order_info) {
-			$this->load->language('sale/order');
+			$this->load->language('solutions/solution');
 
 			$this->document->setTitle($this->language->get('heading_title'));
 
@@ -1136,13 +1136,13 @@ class ControllerSolutionsSolution extends Controller {
 
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('heading_title'),
-				'href' => $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, 'SSL')
+				'href' => $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . $url, 'SSL')
 			);
 
-			$data['shipping'] = $this->url->link('sale/order/shipping', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL');
-			$data['invoice'] = $this->url->link('sale/order/invoice', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL');
-			$data['edit'] = $this->url->link('sale/order/edit', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL');
-			$data['cancel'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, 'SSL');
+			$data['shipping'] = $this->url->link('solutions/solution/shipping', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL');
+			$data['invoice'] = $this->url->link('solutions/solution/invoice', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL');
+			$data['edit'] = $this->url->link('solutions/solution/edit', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL');
+			$data['cancel'] = $this->url->link('solutions/solution', 'token=' . $this->session->data['token'] . $url, 'SSL');
 
 			$data['order_id'] = $this->request->get['order_id'];
 
@@ -1472,7 +1472,7 @@ class ControllerSolutionsSolution extends Controller {
 			unset($this->session->data['cookie']);
 
 			// Set up the API session
-			if ($this->user->hasPermission('modify', 'sale/order')) {
+			if ($this->user->hasPermission('modify', 'solutions/solution')) {
 				$this->load->model('user/api');
 
 				$api_info = $this->model_user_api->getApi($this->config->get('config_api_id'));
@@ -1729,7 +1729,7 @@ class ControllerSolutionsSolution extends Controller {
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['footer'] = $this->load->controller('common/footer');
 
-			$this->response->setOutput($this->load->view('sale/order_info.tpl', $data));
+			$this->response->setOutput($this->load->view('solutions/solution_info.tpl', $data));
 		} else {
 			$this->load->language('error/not_found');
 
@@ -1760,7 +1760,7 @@ class ControllerSolutionsSolution extends Controller {
 	}
 
 	protected function validate() {
-		if (!$this->user->hasPermission('modify', 'sale/order')) {
+		if (!$this->user->hasPermission('modify', 'solutions/solution')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
@@ -1768,11 +1768,11 @@ class ControllerSolutionsSolution extends Controller {
 	}
 
 	public function createInvoiceNo() {
-		$this->load->language('sale/order');
+		$this->load->language('solutions/solution');
 
 		$json = array();
 
-		if (!$this->user->hasPermission('modify', 'sale/order')) {
+		if (!$this->user->hasPermission('modify', 'solutions/solution')) {
 			$json['error'] = $this->language->get('error_permission');
 		} elseif (isset($this->request->get['order_id'])) {
 			if (isset($this->request->get['order_id'])) {
@@ -1781,7 +1781,7 @@ class ControllerSolutionsSolution extends Controller {
 				$order_id = 0;
 			}
 
-			$this->load->model('sale/order');
+			$this->load->model('solutions/solution');
 
 			$invoice_no = $this->model_solutions_solution->createInvoiceNo($order_id);
 
@@ -1797,11 +1797,11 @@ class ControllerSolutionsSolution extends Controller {
 	}
 
 	public function addReward() {
-		$this->load->language('sale/order');
+		$this->load->language('solutions/solution');
 
 		$json = array();
 
-		if (!$this->user->hasPermission('modify', 'sale/order')) {
+		if (!$this->user->hasPermission('modify', 'solutions/solution')) {
 			$json['error'] = $this->language->get('error_permission');
 		} else {
 			if (isset($this->request->get['order_id'])) {
@@ -1810,7 +1810,7 @@ class ControllerSolutionsSolution extends Controller {
 				$order_id = 0;
 			}
 
-			$this->load->model('sale/order');
+			$this->load->model('solutions/solution');
 
 			$order_info = $this->model_solutions_solution->getOrder($order_id);
 
@@ -1832,11 +1832,11 @@ class ControllerSolutionsSolution extends Controller {
 	}
 
 	public function removeReward() {
-		$this->load->language('sale/order');
+		$this->load->language('solutions/solution');
 
 		$json = array();
 
-		if (!$this->user->hasPermission('modify', 'sale/order')) {
+		if (!$this->user->hasPermission('modify', 'solutions/solution')) {
 			$json['error'] = $this->language->get('error_permission');
 		} else {
 			if (isset($this->request->get['order_id'])) {
@@ -1845,7 +1845,7 @@ class ControllerSolutionsSolution extends Controller {
 				$order_id = 0;
 			}
 
-			$this->load->model('sale/order');
+			$this->load->model('solutions/solution');
 
 			$order_info = $this->model_solutions_solution->getOrder($order_id);
 
@@ -1863,11 +1863,11 @@ class ControllerSolutionsSolution extends Controller {
 	}
 
 	public function addCommission() {
-		$this->load->language('sale/order');
+		$this->load->language('solutions/solution');
 
 		$json = array();
 
-		if (!$this->user->hasPermission('modify', 'sale/order')) {
+		if (!$this->user->hasPermission('modify', 'solutions/solution')) {
 			$json['error'] = $this->language->get('error_permission');
 		} else {
 			if (isset($this->request->get['order_id'])) {
@@ -1876,7 +1876,7 @@ class ControllerSolutionsSolution extends Controller {
 				$order_id = 0;
 			}
 
-			$this->load->model('sale/order');
+			$this->load->model('solutions/solution');
 
 			$order_info = $this->model_solutions_solution->getOrder($order_id);
 
@@ -1898,11 +1898,11 @@ class ControllerSolutionsSolution extends Controller {
 	}
 
 	public function removeCommission() {
-		$this->load->language('sale/order');
+		$this->load->language('solutions/solution');
 
 		$json = array();
 
-		if (!$this->user->hasPermission('modify', 'sale/order')) {
+		if (!$this->user->hasPermission('modify', 'solutions/solution')) {
 			$json['error'] = $this->language->get('error_permission');
 		} else {
 			if (isset($this->request->get['order_id'])) {
@@ -1911,7 +1911,7 @@ class ControllerSolutionsSolution extends Controller {
 				$order_id = 0;
 			}
 
-			$this->load->model('sale/order');
+			$this->load->model('solutions/solution');
 
 			$order_info = $this->model_solutions_solution->getOrder($order_id);
 
@@ -1955,7 +1955,7 @@ class ControllerSolutionsSolution extends Controller {
 	}
 
 	public function history() {
-		$this->load->language('sale/order');
+		$this->load->language('solutions/solution');
 
 		$data['text_no_results'] = $this->language->get('text_no_results');
 
@@ -1972,7 +1972,7 @@ class ControllerSolutionsSolution extends Controller {
 
 		$data['histories'] = array();
 
-		$this->load->model('sale/order');
+		$this->load->model('solutions/solution');
 
 		$results = $this->model_solutions_solution->getOrderHistories($this->request->get['order_id'], ($page - 1) * 10, 10);
 
@@ -1991,17 +1991,17 @@ class ControllerSolutionsSolution extends Controller {
 		$pagination->total = $history_total;
 		$pagination->page = $page;
 		$pagination->limit = 10;
-		$pagination->url = $this->url->link('sale/order/history', 'token=' . $this->session->data['token'] . '&order_id=' . $this->request->get['order_id'] . '&page={page}', 'SSL');
+		$pagination->url = $this->url->link('solutions/solution/history', 'token=' . $this->session->data['token'] . '&order_id=' . $this->request->get['order_id'] . '&page={page}', 'SSL');
 
 		$data['pagination'] = $pagination->render();
 
 		$data['results'] = sprintf($this->language->get('text_pagination'), ($history_total) ? (($page - 1) * 10) + 1 : 0, ((($page - 1) * 10) > ($history_total - 10)) ? $history_total : ((($page - 1) * 10) + 10), $history_total, ceil($history_total / 10));
 
-		$this->response->setOutput($this->load->view('sale/order_history.tpl', $data));
+		$this->response->setOutput($this->load->view('solutions/solution_history.tpl', $data));
 	}
 
 	public function invoice() {
-		$this->load->language('sale/order');
+		$this->load->language('solutions/solution');
 
 		$data['title'] = $this->language->get('text_invoice');
 
@@ -2036,7 +2036,7 @@ class ControllerSolutionsSolution extends Controller {
 		$data['column_total'] = $this->language->get('column_total');
 		$data['column_comment'] = $this->language->get('column_comment');
 
-		$this->load->model('sale/order');
+		$this->load->model('solutions/solution');
 
 		$this->load->model('setting/setting');
 
@@ -2228,11 +2228,11 @@ class ControllerSolutionsSolution extends Controller {
 			}
 		}
 
-		$this->response->setOutput($this->load->view('sale/order_invoice.tpl', $data));
+		$this->response->setOutput($this->load->view('solutions/solution_invoice.tpl', $data));
 	}
 
 	public function shipping() {
-		$this->load->language('sale/order');
+		$this->load->language('solutions/solution');
 
 		$data['title'] = $this->language->get('text_shipping');
 
@@ -2275,7 +2275,7 @@ class ControllerSolutionsSolution extends Controller {
 		$data['column_quantity'] = $this->language->get('column_quantity');
 		$data['column_comment'] = $this->language->get('column_comment');
 
-		$this->load->model('sale/order');
+		$this->load->model('solutions/solution');
 
 		$this->load->model('catalog/product');
 
@@ -2418,7 +2418,7 @@ class ControllerSolutionsSolution extends Controller {
 			}
 		}
 
-		$this->response->setOutput($this->load->view('sale/order_shipping.tpl', $data));
+		$this->response->setOutput($this->load->view('solutions/solution_shipping.tpl', $data));
 	}
 
 	public function api() {

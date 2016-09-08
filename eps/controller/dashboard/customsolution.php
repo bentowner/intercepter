@@ -1,7 +1,7 @@
 <?php
 class ControllerDashboardCustomsolution extends Controller {
 	public function index() {
-		$this->load->language('dashboard/Customsolution');
+		$this->load->language('dashboard/customsolution');
 
 		$data['heading_title'] = $this->language->get('heading_title');
 

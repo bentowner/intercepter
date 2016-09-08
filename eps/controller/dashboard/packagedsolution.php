@@ -1,7 +1,7 @@
 <?php
 class ControllerDashboardPackagedsolution extends Controller {
 	public function index() {
-		$this->load->language('dashboard/Popackagesolution');
+		$this->load->language('dashboard/packagedsolution');
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
