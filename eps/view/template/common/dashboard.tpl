@@ -103,9 +103,7 @@ function manageHelp(){	  $('#helpModal').modal('show');	  	}
 		 shortcut.add("SHIFT+H",function() {
 
 			manageHelp();
-			//customer_no
-			//$.post('controller/setting/ajaxpersist.php', { 'fieldname' : 'customer_code', 'value':'<?php echo $customer_object->customer ?>'});
-			//ContactModal('<?php echo $customer_object->customer ?>');
+		
 		});
 
 	});

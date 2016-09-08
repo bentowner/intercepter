@@ -3,13 +3,13 @@
 
   <li id="packagedsolution"><a class="parent" ><i class="fa fa-cloud"></i> <span><?php echo $text_packagedsolutions; ?></span></a>
     <ul>
-      <li id="cloud_foundation"><a href="#" ><i class="fa fa-cloud"></i> <span><?php echo $text_cloud_foundation; ?></span></a></li>
-      <li id="cloud_discovery"><a href="#" ><i class="fa fa-cloud"></i> <span><?php echo $text_cloud_discovery_workshop; ?></span></a></li>
-      <li id="cloud_training"><a href="#" ><i class="fa fa-cloud"></i> <span><?php echo $text_cloud_training; ?></span></a></li>
-      <li id="hpc_cloud_burst"><a href="#" ><i class="fa fa-cube"></i> <span><?php echo $text_hpc_cloud_burst; ?></span></a></li>
-      <li id="vm_migration"><a href="#" ><i class="fa fa-dropbox"></i> <span><?php echo $text_vm_migration; ?></span></a></li>
-      <li id="vm_lift_shift"><a href="#" ><i class="fa fa-dropbox"></i> <span><?php echo $text_vm_lift_shift; ?></span></a></li>
-      <li id="o365_migration"><a href="#" ><i class="fa fa-user"></i> <span><?php echo $text_o365_migration; ?></span></a></li>
+      <li id="cloud_foundation"><a  ><i class="fa fa-cloud"></i> <span><?php echo $text_cloud_foundation; ?></span></a></li>
+      <li id="cloud_discovery"><a  ><i class="fa fa-cloud"></i> <span><?php echo $text_cloud_discovery_workshop; ?></span></a></li>
+      <li id="cloud_training"><a  ><i class="fa fa-cloud"></i> <span><?php echo $text_cloud_training; ?></span></a></li>
+      <li id="hpc_cloud_burst"><a  ><i class="fa fa-cube"></i> <span><?php echo $text_hpc_cloud_burst; ?></span></a></li>
+      <li id="vm_migration"><a  ><i class="fa fa-dropbox"></i> <span><?php echo $text_vm_migration; ?></span></a></li>
+      <li id="vm_lift_shift"><a  ><i class="fa fa-dropbox"></i> <span><?php echo $text_vm_lift_shift; ?></span></a></li>
+      <li id="o365_migration"><a  ><i class="fa fa-user"></i> <span><?php echo $text_o365_migration; ?></span></a></li>
 
 
     </ul>
@@ -17,15 +17,7 @@
 
 
     <li id="customsolution"><a class="parent"  href="<?php echo $customsolution; ?>" ><i class="fa fa-cloud"></i> <span><?php echo $text_customsolutions; ?></span></a></li>
-    <li id="strategicinit"><a class="parent" ><i class="fa fa-clipboard"></i> <span><?php echo $text_strategicinit; ?></span></a>
-      <ul>
-       <li><a href="<?php echo $direct_connect; ?>"><?php echo $text_direct_connect; ?></a></li>
-        <li><a href="<?php echo $hybrid_cloud; ?>"><?php echo $text_hybrid_cloud; ?></a></li>
-        <li><a href="<?php echo $ecx; ?>"><?php echo $text_ecx_enablement; ?></a></li>
-      </ul>
-    </li>
-
-
+    <li id="strategicinit"><a class="parent" ><i class="fa fa-clipboard"></i> <span><?php echo $text_strategicinit; ?></span></a></li>
     <li id="reports"><a class="parent"><i class="fa fa-bar-chart-o fa-fw"></i> <span><?php echo $text_reports; ?></span></a>
     <ul>
       <li><a class="parent"><?php echo $text_service; ?></a>

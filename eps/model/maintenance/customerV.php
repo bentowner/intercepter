@@ -5,7 +5,7 @@
  * @name Customer - model - Maintenance
  * @version 2.0
  * @package LCL - Web application
- * @link http://www.TroyContainerLine.com/v2/lcl
+ * @link http://184.73.15.112//v2/lcl
  */
 class ModelMaintenanceCustomer extends Model {
 

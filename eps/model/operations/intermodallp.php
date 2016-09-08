@@ -4,8 +4,8 @@
  * @author Ben Towner
  * @name intermodallp - model - Operations
  * @version 0.1
- * @package lclapp - Web application
- * @link http://www.TroyContainerLine.com
+ * @package Intercepter
+ * @link http://184.73.15.112/
  */
 class ModelOperationsIntermodallp extends Model {
 

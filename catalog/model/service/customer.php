@@ -4,7 +4,7 @@
  * @author Ben Towner
  * @name Customer - model - Service
  * @package LCL - Web application
- * @link http://www.TroyContainerLine.com/webapp/lcl
+ * @link http://184.73.15.112//webapp/lcl
  */
 class ModelServiceCustomer extends Model {
 

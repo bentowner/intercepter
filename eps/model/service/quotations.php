@@ -10,7 +10,7 @@
  * @name Quotations - model - Service
  * @version 2.0
  * @package LCL - Web application
- * @link http://www.TroyContainerLine.com/webapp/lcl
+ * @link http://184.73.15.112//webapp/lcl
  */
 class ModelServiceQuotations extends Model {
 
