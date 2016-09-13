@@ -557,7 +557,7 @@ class ControllerSolutionsSolution extends Controller {
 	}
 
 	public function getForm() {
-		$this->load->model('sale/customer');
+		$this->load->model('solutions/customer');
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
@@ -714,9 +714,9 @@ class ControllerSolutionsSolution extends Controller {
 			$data['fax'] = $order_info['fax'];
 			$data['account_custom_field'] = $order_info['custom_field'];
 
-			$this->load->model('sale/customer');
+			$this->load->model('solutions/customer');
 
-			$data['addresses'] = $this->model_sale_customer->getAddresses($order_info['customer_id']);
+			$data['addresses'] = $this->model_solutions_customer->getAddresses($order_info['customer_id']);
 
 			$data['payment_firstname'] = $order_info['payment_firstname'];
 			$data['payment_lastname'] = $order_info['payment_lastname'];

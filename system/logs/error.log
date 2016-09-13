@@ -18,3 +18,10 @@
 2016-09-08 14:40:00 - PHP Notice:  Undefined variable: button_add in C:\inetpub\wwwroot\intercepter\eps\view\template\maintenance\customer_list.tpl on line 6
 2016-09-08 14:40:02 - PHP Notice:  Undefined variable: save in C:\inetpub\wwwroot\intercepter\eps\view\template\maintenance\customer_form.tpl on line 7
 2016-09-08 14:40:02 - PHP Notice:  Undefined variable: action in C:\inetpub\wwwroot\intercepter\eps\view\template\maintenance\customer_form.tpl on line 22
+2016-09-09 7:34:32 - PHP Notice:  Undefined variable: button_add in C:\inetpub\wwwroot\intercepter\eps\view\template\maintenance\customer_list.tpl on line 6
+2016-09-09 7:34:41 - PHP Notice:  Undefined variable: save in C:\inetpub\wwwroot\intercepter\eps\view\template\maintenance\customer_form.tpl on line 7
+2016-09-09 7:34:41 - PHP Notice:  Undefined variable: action in C:\inetpub\wwwroot\intercepter\eps\view\template\maintenance\customer_form.tpl on line 22
+2016-09-10 7:15:15 - PHP Notice:  Undefined variable: button_add in C:\inetpub\wwwroot\intercepter\eps\view\template\maintenance\customer_list.tpl on line 6
+2016-09-10 7:15:20 - PHP Notice:  Undefined variable: save in C:\inetpub\wwwroot\intercepter\eps\view\template\maintenance\customer_form.tpl on line 7
+2016-09-10 7:15:20 - PHP Notice:  Undefined variable: action in C:\inetpub\wwwroot\intercepter\eps\view\template\maintenance\customer_form.tpl on line 22
+2016-09-13 11:33:19 - PHP Notice:  Error: Could not load model C:\inetpub\wwwroot\intercepter/eps/model/solutoins/customer.php! in C:\inetpub\wwwroot\intercepter\system\engine\loader.php on line 24

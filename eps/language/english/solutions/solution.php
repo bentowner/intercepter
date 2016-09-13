@@ -138,7 +138,7 @@ $_['column_action']                           = 'Action';
 $_['column_weight']                           = 'Product weight';
 
 // Entry
-$_['entry_store']                             = 'Store';
+$_['entry_store']                             = 'Application';
 $_['entry_customer']                          = 'Customer';
 $_['entry_customer_group']                    = 'Customer Group';
 $_['entry_firstname']                         = 'First Name';
